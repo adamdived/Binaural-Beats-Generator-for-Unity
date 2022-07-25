@@ -12,7 +12,7 @@ public class BinauralBeats : MonoBehaviour
     public enum MainToneHz { C128Hz, D144Hz, E162Hz, F172Hz, G192Hz, A216Hz, B242Hz};
     public MainToneHz mainToneHz = MainToneHz.C128Hz;
 
-    [Range(1, 20)]
+    [Range(1, 32)]
     public double binauralBeatsHz;
 
     private double baseFrequencyHz;
