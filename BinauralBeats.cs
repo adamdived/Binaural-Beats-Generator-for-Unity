@@ -31,7 +31,7 @@ public class BinauralBeats : MonoBehaviour
 
     private void Awake()
     {
-        binauralBeatsHz = 1;
+        binauralBeatsHz = 1; // Base binaural beat step
         oscillator_L = baseFrequencyHz;
         oscillator_R = baseFrequencyHz + 1;
     }
