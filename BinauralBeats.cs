@@ -41,45 +41,31 @@ public class BinauralBeats : MonoBehaviour
         // Here are some tones presets to chose from 432Hz base scale.
         if (mainToneHz == MainToneHz.C128Hz)
         {
-            baseFrequencyHz = 128;
-            oscillator_L = baseFrequencyHz;
-            oscillator_R = baseFrequencyHz + 1;
+            FrequencySettings(128);
         }
         else if (mainToneHz == MainToneHz.D144Hz)
         {
-            baseFrequencyHz = 144;
-            oscillator_L = baseFrequencyHz;
-            oscillator_R = baseFrequencyHz + 1;
+            FrequencySettings(144);
         }
         else if (mainToneHz == MainToneHz.E162Hz)
         {
-            baseFrequencyHz = 162;
-            oscillator_L = baseFrequencyHz;
-            oscillator_R = baseFrequencyHz + 1;
+            FrequencySettings(162);
         }
         else if (mainToneHz == MainToneHz.F172Hz)
         {
-            baseFrequencyHz = 172;
-            oscillator_L = baseFrequencyHz;
-            oscillator_R = baseFrequencyHz + 1;
+            FrequencySettings(172);
         }
         else if (mainToneHz == MainToneHz.G192Hz)
         {
-            baseFrequencyHz = 192;
-            oscillator_L = baseFrequencyHz;
-            oscillator_R = baseFrequencyHz + 1;
+            FrequencySettings(192);
         }
         else if (mainToneHz == MainToneHz.A216Hz)
         {
-            baseFrequencyHz = 216;
-            oscillator_L = baseFrequencyHz;
-            oscillator_R = baseFrequencyHz + 1;
+            FrequencySettings(216);
         }
         else if (mainToneHz == MainToneHz.B242Hz)
         {
-            baseFrequencyHz = 242;
-            oscillator_L = baseFrequencyHz;
-            oscillator_R = baseFrequencyHz + 1;
+            FrequencySettings(242);
         }
 
         increment1 = (oscillator_L + binauralBeatsHz) * 2 * Math.PI / sampling_frequency;
@@ -97,6 +83,13 @@ public class BinauralBeats : MonoBehaviour
 
             if (phase2 > 2 * Math.PI) phase2 = 0;
         }
+    }
+    
+    private void FrequencySettings(float Hz)
+    {
+        baseFrequencyHz = Hz;
+        oscillator_L = baseFrequencyHz;
+        oscillator_R = baseFrequencyHz + 1;
     }
 
     float genSine1()
