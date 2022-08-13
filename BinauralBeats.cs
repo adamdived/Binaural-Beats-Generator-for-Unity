@@ -85,6 +85,7 @@ public class BinauralBeats : MonoBehaviour
         }
     }
     
+    // This function avoid redundancy in the tone frequency selection
     private void FrequencySettings(float Hz)
     {
         baseFrequencyHz = Hz;
