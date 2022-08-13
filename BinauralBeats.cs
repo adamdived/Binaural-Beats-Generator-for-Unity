@@ -38,6 +38,7 @@ public class BinauralBeats : MonoBehaviour
 
     void OnAudioFilterRead(float[] data, int channels)
     {
+        // Here are some tones presets to chose from 432Hz base scale.
         if (mainToneHz == MainToneHz.C128Hz)
         {
             baseFrequencyHz = 128;
